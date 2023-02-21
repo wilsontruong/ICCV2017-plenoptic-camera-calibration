@@ -1,8 +1,10 @@
 % Obtain the linear solution based on corners (without the micro-lenses
 % classified) but from many images of the same type.
 
-use_type = input('Which type do you want??\n');
-
+use_type = input('Select the lens type file you want to create. Pick either 1,2, or 3: ');
+while use_type ~= 1 && use_type ~= 2 && use_type ~= 3
+    use_type = input("Select the lens type file you want to use.\nSelect an integer of a type you have already created in the previous step: ");
+end
 
 if ( (use_type == 1) || (use_type == 2) || (use_type == 3) )
     file_name = sprintf('corr*Type%d*.mat', use_type);

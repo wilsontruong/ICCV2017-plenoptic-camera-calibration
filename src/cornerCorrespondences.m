@@ -32,6 +32,9 @@ type3 = type3_struct';
 
 % decide if you want to select a specific type or not
 use_type = 45;
+while use_type ~= 1 && use_type ~= 2 && use_type ~= 3
+    use_type = input("Select the lens type file you want to create. Pick either 1,2, or 3: ");
+end
 
 % 6xN array containing the correspondences between 3D corners, 2D light
 % field corners and the associated micro-lens centers.
